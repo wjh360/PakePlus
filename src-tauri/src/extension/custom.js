@@ -53,22 +53,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // 拼接URL并跳转
 
-  // if (
-  //   window.location.href.indexOf("timestamp") < 0 &&
-  //   window.location.href.indexOf("/login") >= 0
-  // ) {
-  //   window.location.href = window.location.href + "?timestamp=" + timestamp;
-  // }
+  if (
+    window.location.href.indexOf("timestamp") < 0 &&
+    window.location.href.indexOf("/login") > -1
+  ) {
+    window.location.href = window.location.href + "?timestamp=" + timestamp;
+  }
+
   console.log("window loaded", window.location.href);
-  window.onload = function () {
-    if (window.process && window.process.type === "renderer") {
-      const { BrowserWindow } = require("electron").remote;
-      const win = BrowserWindow.getFocusedWindow();
-      if (win) {
-        win.maximize();
-      }
-    }
-  };
+  // window.onload = function () {
+  //   if (window.process && window.process.type === "renderer") {
+  //     const { BrowserWindow } = require("electron").remote;
+  //     const win = BrowserWindow.getFocusedWindow();
+  //     if (win) {
+  //       win.maximize();
+  //     }
+  //   }
+  // };
 
   //
 });
