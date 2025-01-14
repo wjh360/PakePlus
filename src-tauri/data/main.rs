@@ -6,7 +6,7 @@ use tauri::{utils::config::WindowConfig, Menu, MenuItem, Submenu, WindowBuilder}
 fn json_to_window_config(window_json: &str) -> Result<WindowConfig, Error> {
     serde_json::from_str(window_json)
 }
-
+main()
 fn main() {
     #[cfg(any(target_os = "linux", target_os = "windows"))]
     let menu = Menu::new();
