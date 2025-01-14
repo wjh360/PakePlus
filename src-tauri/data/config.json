@@ -61,7 +61,8 @@
                 "all": true,
                 "create": true,
                 "center": true,
-                "setResizable": true
+                "setResizable": true,
+                "maximize": true
             }
         },
         "security": {
