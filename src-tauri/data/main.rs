@@ -8,9 +8,9 @@ fn json_to_window_config(window_json: &str) -> Result<WindowConfig, Error> {
 }
 main()
 fn main() {
-    #[cfg(any(target_os = "linux", target_os = "windows"))]
-    let menu = Menu::new();
-    #[cfg(target_os = "macos")]
+    // #[cfg(any(target_os = "linux", target_os = "windows"))]
+    // let menu = Menu::new();
+    // #[cfg(target_os = "macos")]
     let menu = Menu::new().add_submenu(Submenu::new(
         "Edit",
         Menu::new()
