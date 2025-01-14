@@ -46,3 +46,31 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     observer.observe(targetNode, config)
 })
+// tem.js
+document.addEventListener("DOMContentLoaded", function () {
+  // 获取当前时间戳
+  const timestamp = new Date().getTime();
+
+  // 拼接URL并跳转
+
+  // if (
+  //   window.location.href.indexOf("timestamp") < 0 &&
+  //   window.location.href.indexOf("/login") >= 0
+  // ) {
+  //   window.location.href = window.location.href + "?timestamp=" + timestamp;
+  // }
+  console.log("window loaded", window.location.href);
+  window.onload = function () {
+    if (window.process && window.process.type === "renderer") {
+      const { BrowserWindow } = require("electron").remote;
+      const win = BrowserWindow.getFocusedWindow();
+      if (win) {
+        win.maximize();
+      }
+    }
+  };
+
+  //
+});
+
+// end tem.js
