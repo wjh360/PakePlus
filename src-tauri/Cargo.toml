@@ -1,6 +1,6 @@
 [package]
-name = "树袋熊"
-version = "1.0.0"
+name = "树袋熊医疗管家"
+version = "3.0.0"
 description = ""
 authors = ["1024xiaoshen"]
 edition = "2021"
